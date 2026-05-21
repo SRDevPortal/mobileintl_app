@@ -1,0 +1,56 @@
+{
+    "actions": [],
+    "creation": "2026-05-12 15:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "session_external_id",
+        "device_info",
+        "ip_address",
+        "user_agent",
+        "supabase_access_token",
+        "supabase_refresh_token"
+    ],
+    "fields": [
+        {
+            "fieldname": "session_external_id",
+            "fieldtype": "Data",
+            "label": "Session External ID",
+            "in_list_view": 1,
+            "reqd": 1
+        },
+        {
+            "fieldname": "device_info",
+            "fieldtype": "JSON",
+            "label": "Device Info"
+        },
+        {
+            "fieldname": "ip_address",
+            "fieldtype": "Data",
+            "label": "IP Address"
+        },
+        {
+            "fieldname": "user_agent",
+            "fieldtype": "Small Text",
+            "label": "User Agent"
+        },
+        {
+            "fieldname": "supabase_access_token",
+            "fieldtype": "Small Text",
+            "label": "Supabase Access Token"
+        },
+        {
+            "fieldname": "supabase_refresh_token",
+            "fieldtype": "Small Text",
+            "label": "Supabase Refresh Token"
+        }
+    ],
+    "istable": 1,
+    "module": "MobileApp",
+    "name": "Mobile App User Session Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

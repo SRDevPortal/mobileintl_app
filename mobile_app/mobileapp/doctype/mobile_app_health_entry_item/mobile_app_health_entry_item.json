@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "creation": "2026-05-15 14:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tool_key",
+  "entry_id",
+  "entry_timestamp",
+  "source",
+  "score",
+  "is_deleted",
+  "data_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "tool_key",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tool Key",
+   "options": "bp_data\nsugar_data\nfood_data\nprescriptions_data\nmed_data\ngfr_data\nhba1c_data\nkft_reports_data\ncbc_reports_data\nliver_body_data\nurine_tracker_data\nlft_reports_data\nskin_daily_snapshot\nskin_symptoms_tracking\nskin_patch_tracking\nmotor_function\nneuro_function\ndiet_lifestyle_data\nexercise_support_data\nfertility_reports_data\nvaricocele_data\ncycle_ovulation_tracker\nvaginal_health_data\nmotor_log_data\nfunctional_log_data\ncancer_symptoms_tracker\ncancer_energy_recovery\ndiabetes_health_data\nbowel_stool_data\nibs_symptoms_data\nprofile_data\ncreat_data\nskin_itch_log\nskin_flare_log\nskin_topical_log\nskin_trigger_log\nskin_clinical_score\nparalysis_motor_strength\nparalysis_balance_posture\nparalysis_speech_face\nparalysis_pain_stiffness",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "entry_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Entry ID"
+  },
+  {
+   "fieldname": "entry_timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Entry Timestamp"
+  },
+  {
+   "default": "app",
+   "fieldname": "source",
+   "fieldtype": "Select",
+   "label": "Source",
+   "options": "app\nsync\nwebhook"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Score"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_deleted",
+   "fieldtype": "Check",
+   "label": "Is Deleted"
+  },
+  {
+   "fieldname": "data_json",
+   "fieldtype": "JSON",
+   "label": "Data JSON"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-05-18 17:58:42.807476",
+ "modified_by": "Administrator",
+ "module": "MobileApp",
+ "name": "Mobile App Health Entry Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

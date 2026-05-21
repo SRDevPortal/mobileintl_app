@@ -1,0 +1,59 @@
+{
+    "actions": [],
+    "creation": "2026-05-12 15:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "record_type",
+        "record_external_id",
+        "subject",
+        "status",
+        "recorded_at",
+        "payload_json"
+    ],
+    "fields": [
+        {
+            "fieldname": "record_type",
+            "fieldtype": "Select",
+            "label": "Record Type",
+            "options": "\nNotification\nSupport Ticket\nWebhook Event",
+            "in_list_view": 1,
+            "reqd": 1
+        },
+        {
+            "fieldname": "record_external_id",
+            "fieldtype": "Data",
+            "label": "Record External ID",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "subject",
+            "fieldtype": "Data",
+            "label": "Subject",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Data",
+            "label": "Status"
+        },
+        {
+            "fieldname": "recorded_at",
+            "fieldtype": "Datetime",
+            "label": "Recorded At"
+        },
+        {
+            "fieldname": "payload_json",
+            "fieldtype": "JSON",
+            "label": "Payload JSON"
+        }
+    ],
+    "istable": 1,
+    "module": "MobileApp",
+    "name": "Mobile App Engagement Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

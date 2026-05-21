@@ -1,0 +1,253 @@
+{
+    "actions": [],
+    "allow_rename": 0,
+    "autoname": "field:appointment_external_id",
+    "creation": "2026-05-15 10:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "appointment_external_id",
+        "booking_id",
+        "links_section",
+        "mobile_app_user",
+        "assigned_agent",
+        "doctor_user",
+        "column_links_right",
+        "doctor_name",
+        "patient_name",
+        "schedule_section",
+        "appointment_date",
+        "appointment_time",
+        "submission_timestamp",
+        "column_schedule_right",
+        "status",
+        "appointment_for",
+        "consultation_section",
+        "consultation_type",
+        "is_online",
+        "google_meet_link",
+        "contact_section",
+        "mobile_number",
+        "email",
+        "column_contact_right",
+        "page_url_disease",
+        "notifications_section",
+        "email_status",
+        "whatsapp_status",
+        "payload_json"
+    ],
+    "fields": [
+        {
+            "fieldname": "appointment_external_id",
+            "fieldtype": "Data",
+            "label": "Appointment External ID",
+            "in_list_view": 1,
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "booking_id",
+            "fieldtype": "Data",
+            "label": "Booking ID",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "links_section",
+            "fieldtype": "Section Break",
+            "label": "Links"
+        },
+        {
+            "fieldname": "mobile_app_user",
+            "fieldtype": "Link",
+            "label": "Patient (Mobile App User)",
+            "options": "Mobile App User",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "assigned_agent",
+            "fieldtype": "Link",
+            "label": "Assign Agent",
+            "options": "User",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "doctor_user",
+            "fieldtype": "Link",
+            "label": "Doctor User",
+            "options": "User",
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "column_links_right",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "doctor_name",
+            "fieldtype": "Data",
+            "label": "Doctor Name",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "patient_name",
+            "fieldtype": "Data",
+            "label": "Patient Name",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "schedule_section",
+            "fieldtype": "Section Break",
+            "label": "Schedule"
+        },
+        {
+            "fieldname": "appointment_date",
+            "fieldtype": "Date",
+            "label": "Appointment Date",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "appointment_time",
+            "fieldtype": "Time",
+            "label": "Appointment Time",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "submission_timestamp",
+            "fieldtype": "Datetime",
+            "label": "Submission Timestamp"
+        },
+        {
+            "fieldname": "column_schedule_right",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Data",
+            "label": "Status",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "appointment_for",
+            "fieldtype": "Data",
+            "label": "For"
+        },
+        {
+            "fieldname": "consultation_section",
+            "fieldtype": "Section Break",
+            "label": "Consultation"
+        },
+        {
+            "fieldname": "consultation_type",
+            "fieldtype": "Small Text",
+            "label": "Consultation",
+            "in_list_view": 1
+        },
+        {
+            "default": "0",
+            "fieldname": "is_online",
+            "fieldtype": "Check",
+            "label": "Is Online",
+            "read_only": 1,
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "google_meet_link",
+            "fieldtype": "Small Text",
+            "label": "Google Meet Link",
+            "read_only": 1
+        },
+        {
+            "fieldname": "contact_section",
+            "fieldtype": "Section Break",
+            "label": "Contact"
+        },
+        {
+            "fieldname": "mobile_number",
+            "fieldtype": "Data",
+            "label": "Mobile Number",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "label": "Email",
+            "options": "Email"
+        },
+        {
+            "fieldname": "column_contact_right",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "page_url_disease",
+            "fieldtype": "Small Text",
+            "label": "Page URL | Disease"
+        },
+        {
+            "fieldname": "notifications_section",
+            "fieldtype": "Section Break",
+            "label": "Notifications",
+            "collapsible": 1
+        },
+        {
+            "fieldname": "email_status",
+            "fieldtype": "Data",
+            "label": "Email Status"
+        },
+        {
+            "fieldname": "whatsapp_status",
+            "fieldtype": "Data",
+            "label": "WhatsApp Status"
+        },
+        {
+            "fieldname": "payload_json",
+            "fieldtype": "JSON",
+            "label": "Payload JSON"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-05-15 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "MobileApp",
+    "name": "Mobile App Appointment",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Mobile App Doctor",
+            "share": 0,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "title_field": "patient_name",
+    "track_changes": 1
+}

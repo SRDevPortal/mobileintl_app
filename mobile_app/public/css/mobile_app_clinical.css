@@ -1,0 +1,340 @@
+/* Mobile App — clinical / doctor-facing Desk UI */
+
+.ma-clinical-header {
+	background: linear-gradient(135deg, #0d5c63 0%, #14808a 55%, #1a9aa6 100%);
+	border-radius: var(--border-radius-lg);
+	color: #fff;
+	padding: 1.25rem 1.5rem;
+	margin-bottom: 1.25rem;
+	box-shadow: 0 4px 14px rgba(13, 92, 99, 0.22);
+}
+
+.ma-clinical-header__top {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.ma-clinical-header__name {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin: 0 0 0.25rem;
+	letter-spacing: -0.02em;
+}
+
+.ma-clinical-header__meta {
+	opacity: 0.92;
+	font-size: 0.875rem;
+	margin: 0;
+}
+
+.ma-clinical-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin-top: 0;
+	justify-content: flex-end;
+	align-self: flex-start;
+	max-width: min(100%, 420px);
+}
+
+.ma-chip {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.2rem 0.65rem;
+	border-radius: 999px;
+	font-size: 0.75rem;
+	font-weight: 500;
+	background: rgba(255, 255, 255, 0.18);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.ma-chip--accent {
+	background: rgba(255, 255, 255, 0.95);
+	color: #0d5c63;
+	border-color: transparent;
+}
+
+.ma-chip--warn {
+	background: #fef3c7;
+	color: #92400e;
+	border-color: #fcd34d;
+}
+
+.ma-vitals-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.75rem;
+	margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+	.ma-vitals-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.ma-clinical-chips {
+		justify-content: flex-start;
+		max-width: 100%;
+		margin-top: 0.5rem;
+	}
+}
+
+.ma-vital-card {
+	background: rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: var(--border-radius-md);
+	padding: 0.65rem 0.85rem;
+	min-width: 0;
+	overflow: hidden;
+}
+
+.ma-vital-card__label {
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	opacity: 0.85;
+	margin-bottom: 0.15rem;
+}
+
+.ma-vital-card__value {
+	font-size: 1.05rem;
+	font-weight: 600;
+	line-height: 1.35;
+	word-break: break-word;
+	overflow-wrap: anywhere;
+}
+
+.ma-vital-card--email .ma-vital-card__value {
+	font-size: 0.8rem;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.ma-vital-card--phone .ma-vital-card__value {
+	font-size: 0.95rem;
+}
+
+.ma-vital-card--count .ma-vital-card__value {
+	font-size: 1.25rem;
+}
+
+/* Doctor-facing form: hide ERP chrome that confuses clinical workflow */
+.ma-doctor-user-form .form-dashboard-section {
+	display: none !important;
+}
+
+.ma-doctor-user-form .form-links {
+	display: none !important;
+}
+
+/* Profile summary on Profiles tab */
+.ma-profile-panel {
+	background: var(--fg-color);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius-lg);
+	padding: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.ma-profile-panel h4 {
+	margin: 0 0 1rem;
+	font-size: 1rem;
+	color: var(--text-muted);
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.ma-profile-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: 1rem;
+}
+
+.ma-stat {
+	border-left: 3px solid #14808a;
+	padding-left: 0.75rem;
+}
+
+.ma-stat__label {
+	font-size: 0.75rem;
+	color: var(--text-muted);
+	margin-bottom: 0.2rem;
+}
+
+.ma-stat__value {
+	font-size: 1.05rem;
+	font-weight: 600;
+	color: var(--text-color);
+}
+
+/* Health tools clinical workspace */
+.ma-health-workspace {
+	display: grid;
+	grid-template-columns: 260px 1fr;
+	gap: 1rem;
+	min-height: 320px;
+}
+
+@media (max-width: 992px) {
+	.ma-health-workspace {
+		grid-template-columns: 1fr;
+	}
+}
+
+.ma-tool-nav {
+	background: var(--fg-color);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius-lg);
+	overflow: hidden;
+	max-height: 520px;
+	overflow-y: auto;
+}
+
+.ma-tool-nav__item {
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 0.75rem 1rem;
+	border: none;
+	border-bottom: 1px solid var(--border-color);
+	background: transparent;
+	cursor: pointer;
+	transition: background 0.15s;
+}
+
+.ma-tool-nav__item:hover,
+.ma-tool-nav__item.is-active {
+	background: #e6f4f5;
+}
+
+.ma-tool-nav__item.is-active {
+	border-left: 3px solid #14808a;
+	padding-left: calc(1rem - 3px);
+}
+
+.ma-tool-nav__title {
+	font-weight: 600;
+	font-size: 0.875rem;
+	color: var(--text-color);
+}
+
+.ma-tool-nav__sub {
+	font-size: 0.75rem;
+	color: var(--text-muted);
+	margin-top: 0.15rem;
+}
+
+.ma-tool-panel {
+	background: var(--fg-color);
+	border: 1px solid var(--border-color);
+	border-radius: var(--border-radius-lg);
+	padding: 1.25rem;
+}
+
+.ma-tool-panel__head {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0.75rem;
+	margin-bottom: 1rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.ma-tool-panel__title {
+	margin: 0;
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #0d5c63;
+}
+
+.ma-tool-panel__meta {
+	font-size: 0.8rem;
+	color: var(--text-muted);
+}
+
+.ma-tool-panel__body {
+	min-height: 200px;
+}
+
+/* Hide raw ERP grid by default; toggle link reveals it */
+.form-page .frappe-control[data-fieldname="health_entries"].ma-grid-hidden > .grid-field {
+	display: none;
+}
+
+.ma-clinical-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.8125rem;
+}
+
+.ma-clinical-table th {
+	text-align: left;
+	padding: 0.55rem 0.75rem;
+	background: #f0f9fa;
+	color: #0d5c63;
+	font-weight: 600;
+	border-bottom: 2px solid #c5e8eb;
+	white-space: nowrap;
+}
+
+.ma-clinical-table td {
+	padding: 0.5rem 0.75rem;
+	border-bottom: 1px solid var(--border-color);
+	vertical-align: top;
+}
+
+.ma-clinical-table tbody tr:hover {
+	background: #f8fcfc;
+}
+
+.ma-clinical-table tr.ma-row-alert td {
+	background: #fef2f2;
+	color: #991b1b;
+}
+
+.ma-clinical-table tr.ma-row-warn td {
+	background: #fffbeb;
+}
+
+.ma-empty-state {
+	text-align: center;
+	padding: 2.5rem 1rem;
+	color: var(--text-muted);
+}
+
+.ma-empty-state__icon {
+	font-size: 2rem;
+	opacity: 0.4;
+	margin-bottom: 0.5rem;
+}
+
+.ma-section-toggle {
+	margin-top: 0.75rem;
+	font-size: 0.8rem;
+}
+
+.ma-raw-grid-wrap {
+	margin-top: 1rem;
+	padding-top: 1rem;
+	border-top: 1px dashed var(--border-color);
+}
+
+.ma-raw-grid-wrap.collapsed {
+	display: none;
+}
+
+/* Tab labels feel more clinical */
+.form-tabs-list .form-tabs .nav-link[data-fieldname="health_entries_tab"] {
+	font-weight: 600;
+}
+
+.form-tabs-list .form-tabs .nav-link.active[data-fieldname="health_entries_tab"] {
+	color: #0d5c63;
+	border-bottom-color: #14808a;
+}

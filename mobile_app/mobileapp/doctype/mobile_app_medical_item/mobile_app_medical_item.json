@@ -1,0 +1,59 @@
+{
+    "actions": [],
+    "creation": "2026-05-12 15:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "record_type",
+        "record_external_id",
+        "title",
+        "status",
+        "recorded_at",
+        "payload_json"
+    ],
+    "fields": [
+        {
+            "fieldname": "record_type",
+            "fieldtype": "Select",
+            "label": "Record Type",
+            "options": "\nDisease\nDisease Selection\nHealth Entry\nPrescription\nDoctor",
+            "in_list_view": 1,
+            "reqd": 1
+        },
+        {
+            "fieldname": "record_external_id",
+            "fieldtype": "Data",
+            "label": "Record External ID",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "title",
+            "fieldtype": "Data",
+            "label": "Title",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Data",
+            "label": "Status"
+        },
+        {
+            "fieldname": "recorded_at",
+            "fieldtype": "Datetime",
+            "label": "Recorded At"
+        },
+        {
+            "fieldname": "payload_json",
+            "fieldtype": "JSON",
+            "label": "Payload JSON"
+        }
+    ],
+    "istable": 1,
+    "module": "MobileApp",
+    "name": "Mobile App Medical Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

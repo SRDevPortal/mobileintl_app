@@ -1,0 +1,109 @@
+{
+    "actions": [],
+    "creation": "2026-05-12 15:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "profile_name",
+        "phone",
+        "email",
+        "gender",
+        "disease",
+        "age",
+        "height",
+        "weight",
+        "membership_type",
+        "doctor_assigned",
+        "patient_id",
+        "profile_complete",
+        "force_profile_setup",
+        "profile_data_json"
+    ],
+    "fields": [
+        {
+            "fieldname": "profile_name",
+            "fieldtype": "Data",
+            "label": "Profile Name",
+            "in_list_view": 1,
+            "reqd": 1
+        },
+        {
+            "fieldname": "phone",
+            "fieldtype": "Data",
+            "label": "Phone",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "label": "Email",
+            "options": "Email"
+        },
+        {
+            "fieldname": "gender",
+            "fieldtype": "Data",
+            "label": "Gender"
+        },
+        {
+            "fieldname": "disease",
+            "fieldtype": "Data",
+            "label": "Disease",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "age",
+            "fieldtype": "Int",
+            "label": "Age"
+        },
+        {
+            "fieldname": "height",
+            "fieldtype": "Float",
+            "label": "Height"
+        },
+        {
+            "fieldname": "weight",
+            "fieldtype": "Float",
+            "label": "Weight"
+        },
+        {
+            "fieldname": "membership_type",
+            "fieldtype": "Data",
+            "label": "Membership Type"
+        },
+        {
+            "fieldname": "doctor_assigned",
+            "fieldtype": "Data",
+            "label": "Doctor Assigned"
+        },
+        {
+            "fieldname": "patient_id",
+            "fieldtype": "Data",
+            "label": "Patient ID"
+        },
+        {
+            "default": "0",
+            "fieldname": "profile_complete",
+            "fieldtype": "Check",
+            "label": "Profile Complete"
+        },
+        {
+            "default": "0",
+            "fieldname": "force_profile_setup",
+            "fieldtype": "Check",
+            "label": "Force Profile Setup"
+        },
+        {
+            "fieldname": "profile_data_json",
+            "fieldtype": "JSON",
+            "label": "Profile Data JSON"
+        }
+    ],
+    "istable": 1,
+    "module": "MobileApp",
+    "name": "Mobile App User Profile Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

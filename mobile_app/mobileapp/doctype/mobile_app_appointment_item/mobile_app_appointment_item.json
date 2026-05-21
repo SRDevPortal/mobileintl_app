@@ -1,0 +1,130 @@
+{
+    "actions": [],
+    "creation": "2026-05-12 15:00:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "field_order": [
+        "appointment_external_id",
+        "booking_id",
+        "user_id",
+        "submission_timestamp",
+        "appointment_date",
+        "appointment_time",
+        "doctor_name",
+        "patient_name",
+        "mobile_number",
+        "email",
+        "consultation_type",
+        "appointment_for",
+        "page_url_disease",
+        "status",
+        "email_status",
+        "whatsapp_status",
+        "payload_json"
+    ],
+    "fields": [
+        {
+            "fieldname": "appointment_external_id",
+            "fieldtype": "Data",
+            "label": "Appointment External ID",
+            "in_list_view": 1,
+            "reqd": 1
+        },
+        {
+            "fieldname": "booking_id",
+            "fieldtype": "Data",
+            "label": "Booking ID",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "user_id",
+            "fieldtype": "Data",
+            "label": "User ID",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "submission_timestamp",
+            "fieldtype": "Datetime",
+            "label": "Submission Timestamp"
+        },
+        {
+            "fieldname": "appointment_date",
+            "fieldtype": "Date",
+            "label": "Appointment Date",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "appointment_time",
+            "fieldtype": "Time",
+            "label": "Appointment Time",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "doctor_name",
+            "fieldtype": "Data",
+            "label": "Doctor Name",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "patient_name",
+            "fieldtype": "Data",
+            "label": "Patient Name"
+        },
+        {
+            "fieldname": "mobile_number",
+            "fieldtype": "Data",
+            "label": "Mobile Number",
+            "options": "Phone"
+        },
+        {
+            "fieldname": "email",
+            "fieldtype": "Data",
+            "label": "Email",
+            "options": "Email"
+        },
+        {
+            "fieldname": "consultation_type",
+            "fieldtype": "Data",
+            "label": "Consultation Type"
+        },
+        {
+            "fieldname": "appointment_for",
+            "fieldtype": "Data",
+            "label": "For"
+        },
+        {
+            "fieldname": "page_url_disease",
+            "fieldtype": "Small Text",
+            "label": "Page URL | Disease"
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Data",
+            "label": "Status",
+            "in_list_view": 1
+        },
+        {
+            "fieldname": "email_status",
+            "fieldtype": "Data",
+            "label": "Email Status"
+        },
+        {
+            "fieldname": "whatsapp_status",
+            "fieldtype": "Data",
+            "label": "WhatsApp Status"
+        },
+        {
+            "fieldname": "payload_json",
+            "fieldtype": "JSON",
+            "label": "Payload JSON"
+        }
+    ],
+    "istable": 1,
+    "module": "MobileApp",
+    "name": "Mobile App Appointment Item",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC"
+}

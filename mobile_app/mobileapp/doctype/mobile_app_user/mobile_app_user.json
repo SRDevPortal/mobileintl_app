@@ -1,0 +1,310 @@
+{
+    "actions": [],
+    "allow_events_in_timeline": 1,
+    "allow_rename": 1,
+    "autoname": "field:external_id",
+    "creation": "2026-05-11 13:15:00.000000",
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "hide_toolbar": 0,
+    "field_order": [
+        "details_tab",
+        "identity_section",
+        "column_identity_left",
+        "external_id",
+        "supabase_user_id",
+        "email",
+        "phone",
+        "column_identity_right",
+        "full_name",
+        "first_name",
+        "last_name",
+        "is_active",
+        "last_login_at",
+        "image",
+        "timestamps_section",
+        "column_ts_left",
+        "created_at",
+        "column_ts_right",
+        "updated_at",
+        "profiles_tab",
+        "profiles_section",
+        "profiles",
+        "sessions_tab",
+        "sessions_section",
+        "sessions",
+        "medical_tab",
+        "medical_section",
+        "medical_items",
+        "health_entries_tab",
+        "health_entries_section",
+        "health_entries",
+        "appointments_tab",
+        "appointments_section",
+        "appointments",
+        "engagement_tab",
+        "engagement_section",
+        "engagement_items"
+    ],
+    "fields": [
+        {
+            "fieldname": "details_tab",
+            "fieldtype": "Tab Break",
+            "label": "Details"
+        },
+        {
+            "fieldname": "identity_section",
+            "fieldtype": "Section Break",
+            "label": "Identity",
+            "options": "fa fa-user"
+        },
+        {
+            "fieldname": "column_identity_left",
+            "fieldtype": "Column Break",
+            "width": "50%"
+        },
+        {
+            "fieldname": "external_id",
+            "label": "ID",
+            "fieldtype": "Data",
+            "reqd": 1,
+            "unique": 1,
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "search_index": 1
+        },
+        {
+            "fieldname": "supabase_user_id",
+            "label": "Unique Customer id",
+            "fieldtype": "Data",
+            "read_only": 1,
+            "unique": 1,
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "search_index": 1
+        },
+        {
+            "fieldname": "email",
+            "label": "Email",
+            "fieldtype": "Data",
+            "options": "Email",
+            "unique": 1,
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "search_index": 1
+        },
+        {
+            "fieldname": "phone",
+            "label": "Phone",
+            "fieldtype": "Data",
+            "options": "Phone",
+            "in_list_view": 1,
+            "in_standard_filter": 1,
+            "search_index": 1
+        },
+        {
+            "fieldname": "column_identity_right",
+            "fieldtype": "Column Break",
+            "width": "50%"
+        },
+        {
+            "fieldname": "full_name",
+            "label": "Name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "first_name",
+            "label": "First Name",
+            "fieldtype": "Data"
+        },
+        {
+            "fieldname": "last_name",
+            "label": "Last Name",
+            "fieldtype": "Data"
+        },
+        {
+            "fieldname": "is_active",
+            "label": "Is Active",
+            "fieldtype": "Check",
+            "default": "1",
+            "in_list_view": 1,
+            "in_standard_filter": 1
+        },
+        {
+            "fieldname": "last_login_at",
+            "label": "Last Login At",
+            "fieldtype": "Datetime"
+        },
+        {
+            "fieldname": "image",
+            "label": "Image",
+            "fieldtype": "Attach Image",
+            "hidden": 1,
+            "print_hide": 1
+        },
+        {
+            "fieldname": "timestamps_section",
+            "fieldtype": "Section Break",
+            "label": "Timestamps",
+            "collapsible": 1
+        },
+        {
+            "fieldname": "column_ts_left",
+            "fieldtype": "Column Break",
+            "width": "50%"
+        },
+        {
+            "fieldname": "created_at",
+            "label": "Created At",
+            "fieldtype": "Datetime"
+        },
+        {
+            "fieldname": "column_ts_right",
+            "fieldtype": "Column Break",
+            "width": "50%"
+        },
+        {
+            "fieldname": "updated_at",
+            "label": "Updated At",
+            "fieldtype": "Datetime"
+        },
+        {
+            "fieldname": "profiles_tab",
+            "fieldtype": "Tab Break",
+            "label": "Profiles"
+        },
+        {
+            "fieldname": "profiles_section",
+            "fieldtype": "Section Break",
+            "label": "Profiles"
+        },
+        {
+            "fieldname": "profiles",
+            "label": "Profiles",
+            "fieldtype": "Table",
+            "options": "Mobile App User Profile Item"
+        },
+        {
+            "fieldname": "sessions_tab",
+            "fieldtype": "Tab Break",
+            "label": "Sessions"
+        },
+        {
+            "fieldname": "sessions_section",
+            "fieldtype": "Section Break",
+            "label": "Sessions"
+        },
+        {
+            "fieldname": "sessions",
+            "label": "Sessions",
+            "fieldtype": "Table",
+            "options": "Mobile App User Session Item"
+        },
+        {
+            "fieldname": "medical_tab",
+            "fieldtype": "Tab Break",
+            "label": "Medical"
+        },
+        {
+            "fieldname": "medical_section",
+            "fieldtype": "Section Break",
+            "label": "Medical Records"
+        },
+        {
+            "fieldname": "medical_items",
+            "label": "Medical Records",
+            "fieldtype": "Table",
+            "options": "Mobile App Medical Item"
+        },
+        {
+            "fieldname": "health_entries_tab",
+            "fieldtype": "Tab Break",
+            "label": "Clinical Logs"
+        },
+        {
+            "fieldname": "health_entries_section",
+            "fieldtype": "Section Break",
+            "label": "Patient clinical history"
+        },
+        {
+            "fieldname": "health_entries",
+            "label": "Health Entries",
+            "fieldtype": "Table",
+            "options": "Mobile App Health Entry Item"
+        },
+        {
+            "fieldname": "appointments_tab",
+            "fieldtype": "Tab Break",
+            "label": "Appointments"
+        },
+        {
+            "fieldname": "appointments_section",
+            "fieldtype": "Section Break",
+            "label": "Appointments"
+        },
+        {
+            "fieldname": "appointments",
+            "label": "Appointments",
+            "fieldtype": "Table",
+            "options": "Mobile App Appointment Item"
+        },
+        {
+            "fieldname": "engagement_tab",
+            "fieldtype": "Tab Break",
+            "label": "Engagement"
+        },
+        {
+            "fieldname": "engagement_section",
+            "fieldtype": "Section Break",
+            "label": "Notifications, Support and Webhooks"
+        },
+        {
+            "fieldname": "engagement_items",
+            "label": "Engagement Records",
+            "fieldtype": "Table",
+            "options": "Mobile App Engagement Item"
+        }
+    ],
+    "image_field": "image",
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-05-12 12:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "MobileApp",
+    "name": "Mobile App User",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 0,
+            "delete": 0,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "Mobile App Doctor",
+            "share": 0,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1,
+    "title_field": "full_name"
+}
