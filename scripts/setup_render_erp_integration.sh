@@ -14,7 +14,7 @@ bench --site "$SITE" migrate
 bench --site "$SITE" clear-cache
 
 echo "==> Ensuring API user + Support Ticket API role..."
-bench --site "$SITE" execute mobile_app.scripts.ensure_support_ticket_api_user.ensure \
+bench --site "$SITE" execute mobileintl_app.scripts.ensure_support_ticket_api_user.ensure \
   --kwargs "{\"email\": \"$API_USER_EMAIL\"}"
 
 PUBLIC_URL="${PUBLIC_ERP_URL:-}"

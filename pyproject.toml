@@ -1,5 +1,5 @@
 [project]
-name = "mobile_app"
+name = "mobileintl_app"
 authors = [
     { name = "SRIAAS", email = "admin@example.com"}
 ]
