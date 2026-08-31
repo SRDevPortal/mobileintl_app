@@ -39,7 +39,6 @@ app_include_js = [
 doctype_js = {
 	"Mobile App User": [
 		"public/js/mobile_app_clinical_ui.js",
-		"public/js/mobile_app_support_ticket_ui.js",
 		"public/js/mobile_app_user_form.js",
 	],
 	"Mobile App Appointment": "public/js/mobile_app_appointment.js",
@@ -48,7 +47,6 @@ doctype_js = {
 doctype_list_js = {
 	"Mobile App User": "public/js/mobile_app_user_list.js",
 	"Mobile App Appointment": "public/js/mobile_app_appointment_list.js",
-	"App Support Ticket": "public/js/app_support_ticket_list.js",
 }
 
 has_permission = {
