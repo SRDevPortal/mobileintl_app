@@ -32,7 +32,7 @@ app_include_css = [
 app_include_js = [
 	"/assets/mobileintl_app/js/doctor_clinical_guard.js",
 	"/assets/mobileintl_app/js/mobile_app_desk_utils.js",
-	"/assets/mobileintl_app/js/mobile_app_workspace.js?v=20260525_dashboard_blank_fix",
+	"/assets/mobileintl_app/js/mobile_app_workspace.js?v=20260831_remove_support_ticket",
 ]
 # app_include_js = "/assets/mobileintl_app/js/mobileintl_app.js"
 
