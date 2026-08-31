@@ -33,6 +33,17 @@
 			route: ["List", "Mobile App Appointment"],
 		},
 		{
+			key: "tickets",
+			title: "Support Tickets",
+			metric: "--",
+			doctype: "Support Ticket",
+			accent: "purple",
+			icon: "ticket",
+			footer_label: "Active Tickets",
+			footer_value: "--",
+			route: ["List", "Support Ticket"],
+		},
+		{
 			key: "portal",
 			title: "Doctor Clinical Portal",
 			metric: "10",
@@ -124,6 +135,8 @@
 				'<path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z"/><path d="M5 20a7 7 0 0 1 14 0"/><path d="m9 16 3 3 3-3"/>',
 			appointment:
 				'<rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><circle cx="9" cy="15" r="2"/><path d="M13 17c.8-1.8 4.2-1.8 5 0"/>',
+			ticket:
+				'<path d="M5 6h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4V8a2 2 0 0 1 2-2Z"/><path d="M9 9h6M9 15h6"/>',
 			play: '<circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4Z"/>',
 		};
 
@@ -284,6 +297,10 @@
 		])
 			.then((count) => set_footer("appointments", count))
 			.catch(() => set_footer("appointments", "--"));
+
+		get_count("Support Ticket", [["Support Ticket", "status", "not in", ["Closed", "Resolved"]]])
+			.then((count) => set_footer("tickets", count))
+			.catch(() => set_footer("tickets", "--"));
 
 	}
 

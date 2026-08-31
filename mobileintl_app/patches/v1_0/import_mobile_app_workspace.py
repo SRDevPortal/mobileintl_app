@@ -11,6 +11,8 @@ MOBILE_DOCTYPES = (
 	"Mobile App Medical Item",
 	"Mobile App Appointment Item",
 	"Mobile App Engagement Item",
+	"Support Ticket",
+	"Support Ticket Message",
 )
 
 
