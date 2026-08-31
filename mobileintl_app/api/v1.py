@@ -209,7 +209,10 @@ def users_sync():
 			doc.update({k: v for k, v in fields.items() if k not in ("doctype", "external_id") and v is not None})
 			doc.save()
 		else:
-			doc = frappe.get_doc(fields).insert()
+			# This server-to-server endpoint is protected by mobile_app_erp_token.
+			# The integration user should not need broad Desk Create permission for
+			# patient onboarding after the shared token has been validated.
+			doc = frappe.get_doc(fields).insert(ignore_permissions=True)
 	return _ok(_mobile_app_user_api_payload(doc), 200)
 
 
